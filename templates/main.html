@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Bem-vindo, {{ usuario }}!</h2>
+        <form method="POST">
+            <label>Rede Social: <input type="text" name="rede" required></label>
+            <button type="submit">Gerar Senha</button>
+        </form>
+        <h3>Senhas Vinculadas:</h3>
+        <ul>
+            {% for item in senhas %}
+                <li><strong>{{ item.rede }}:</strong> {{ item.senha }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('logout') }}" class="logout">Sair</a>
+    </div>
+</body>
+</html>

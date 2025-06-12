@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-cadastro {
+  width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-cadastro h1 {
+  color: #e60000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+form button {
+  padding: 12px;
+  background-color: #e60000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #cc0000;
+}
+
+a {
+  color: #e60000;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #cc0000;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
