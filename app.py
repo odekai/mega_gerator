@@ -33,6 +33,10 @@ def login():
         usuarios = carregar_usuarios()
         user = request.form["usuario"]
         senha = request.form["senha"]
+
+        if not user or not senha:
+            return render_template("login.html", erro="Por favor, preencha todos os campos.")
+        
         if user in usuarios and usuarios[user] == senha:
             session["usuario"] = user
             return redirect(url_for("main"))
